@@ -1,0 +1,10 @@
+.content {
+	position: fixed;
+	top: 50px;
+	left: 280px;
+	width: calc(100vw - 280px);
+	height: calc(100vh - 50px);
+	background: #383838;
+	text-align: center;
+	overflow: auto;
+}

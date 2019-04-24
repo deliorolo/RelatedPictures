@@ -1,0 +1,17 @@
+<div class="menu">
+    <a onclick="window.location.reload()">New Game</a>
+    <a (click)="toggle()">{{ buttonText }}</a>
+</div>
+<div class="score">
+    <a style="color:blue">Blue: {{ blueLeft }}</a>
+    <a style="color:green">Green: {{ greenLeft }}</a>
+</div>
+<br>
+<div class="message">
+    <p>Round: {{ actualPlayer }}</p>
+    <br>
+    <a *ngIf="blueLeft == 0" style="color:blue">Blue Won!</a>
+    <a *ngIf="greenLeft == 0" style="color:green">Green Won!</a>
+    <a *ngIf="redSelected && actualPlayer == 'Blue'" style="color:green">Green Won!</a>
+    <a *ngIf="redSelected && actualPlayer == 'Green'" style="color:blue">Blue Won!</a>
+</div>

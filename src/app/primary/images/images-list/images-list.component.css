@@ -1,0 +1,35 @@
+.column {
+	float: left;
+	width: 18%;
+  padding: 10px;
+  min-width: 220px;
+  min-height: 195px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 170px;
+    padding: 10px;
+  }
+
+  .frameYellow {
+    padding:8px;
+    background-color: yellow;
+ }
+
+ .frameRed {
+  padding:8px;
+  background-color: red;
+ }
+
+  .frameBlue {
+    padding:8px;
+    background-color: blue;
+}
+
+.frameGreen {
+  padding:8px;
+  background-color: green;
+}

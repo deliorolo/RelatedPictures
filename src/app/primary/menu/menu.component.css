@@ -1,0 +1,59 @@
+.menu {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 280px;
+	height: calc(100vh - 50px);
+    background: #1c1d22;
+	padding-top: 20px;
+	font-size: 20px;
+}
+
+.menu a{
+	padding: 8px 8px 8px 32px;
+  	font-size: 25px;
+  	color: #818181;
+	display: block;
+	cursor: pointer;
+}
+
+.score {
+	position: fixed;
+	top: 200px;
+	left: 0;
+	width: 280px;
+	height: calc(100vh - 200px);
+    background: #1c1d22;
+	padding-top: 20px;
+	font-size: 20px;
+}
+
+.score a{
+	padding: 8px 8px 8px 32px;
+  	font-size: 25px;
+	display: block;
+}
+
+.message {
+	position: fixed;
+	top: 300px;
+	left: 0;
+	width: 280px;
+	height: calc(100vh - 300px);
+    background: #1c1d22;
+	padding-top: 20px;
+	font-size: 20px;
+}
+
+.message a{
+	padding: 8px 8px 8px 32px;
+  	font-size: 45px;
+	display: block;
+}
+
+.message p{
+	padding: 8px 8px 8px 32px;
+  	font-size: 30px;
+	display: block;
+	color: white;
+}
