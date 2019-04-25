@@ -11,8 +11,8 @@ export class MenuComponent implements OnInit {
 
   buttonText: string = "Show Colors";
   showFrames: boolean = false;
-  blueLeft: number = 0;
-  greenLeft: number = 0;
+  blueLeft: number;
+  greenLeft: number;
   actualPlayer: string;
   redSelected: boolean;
 
@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
 
-    this.menuService.imagesListCallSource$.subscribe(
+    this.menuService.imagesListCall$.subscribe(
       (data) => {
             this.blueLeft = data[0];
             this.greenLeft = data[1];

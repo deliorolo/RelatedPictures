@@ -9,19 +9,19 @@ export class MenuService {
 
   constructor() { }
 
-  private menuCallSource = new Subject<any>();
-  private imagesListCallSource = new Subject<any>();
+  private menuCall = new Subject<any>();
+  private imagesListCall = new Subject<any>();
 
-  menuCallSource$ = this.menuCallSource.asObservable();
+  menuCall$ = this.menuCall.asObservable();
 
   HideShowColors() {
-    this.menuCallSource.next();
+    this.menuCall.next();
   }
 
-  imagesListCallSource$ = this.imagesListCallSource.asObservable();
+  imagesListCall$ = this.imagesListCall.asObservable();
 
   SendDataPoints( data:any ) {
-    this.imagesListCallSource.next ( data );   
+    this.imagesListCall.next ( data );   
   }
 
 }

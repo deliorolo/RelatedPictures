@@ -21,21 +21,37 @@ export class ImagesComponent implements OnInit {
 
   ngOnInit() {
 
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < 30; i++) {
 
-      this.id = Math.floor(Math.random() * 8806) + 1;
+      /*this.id = Math.floor(Math.random() * 8806) + 1;
       this.dataService.getImage(this.id)
         .subscribe((image: IImage) => this.urls$[i] = image.url)
-        .add(() => { this.k++; this.MapValidUrls(); })
+        .add(() => { this.k++; this.MapValidUrls(); })*/
+
+      this.id = Math.floor(Math.random() * 1085);
+      
+      this.urls$[i] = this.dataService.getImage(this.id)
+        this.k++; 
+        this.MapValidUrls(); 
+
+        
     }
+
   }
 
   MapValidUrls() {
-
-    if (this.urls$[this.k].length > 1 && this.urls$[this.k].includes('jpg') && !this.goodurl.includes(this.urls$[this.k])) {
+    if (!this.goodurl.includes(this.urls$[this.k])) {
       this.goodurl[this.j] = this.urls$[this.k];
       this.j++;
     }
   }
+
+  /* MapValidUrls() {
+ 
+     if (this.urls$[this.k].length > 1 && this.urls$[this.k].includes('jpg') && !this.goodurl.includes(this.urls$[this.k])) {
+       this.goodurl[this.j] = this.urls$[this.k];
+       this.j++;
+     }
+   }*/
 
 }
