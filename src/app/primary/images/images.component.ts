@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { DataService } from '../../core/data.service';
-import { IImage } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-images',
