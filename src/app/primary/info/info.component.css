@@ -1,0 +1,31 @@
+.content {
+	position: fixed;
+	top: 50px;
+	left: 280px;
+	width: calc(100vw - 280px);
+	height: calc(100vh - 50px);
+	background: #383838;
+	text-align: justify;
+	overflow: auto;
+	padding: 5px 50px;
+	font-size: 18px;
+	color:#999966;
+	font-family: Georgia;
+}
+
+.column1 {
+	float: left;	
+	  padding: 10px;
+	  width:320px;
+	  color: #996600;
+	  text-align: center;
+	  position: relative;
+	  align-content: center;
+  }
+
+  .column2 {
+	float: left;	
+	  padding: 30px;
+	  width:65%;
+	  position: relative;
+  }

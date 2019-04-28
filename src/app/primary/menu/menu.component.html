@@ -1,14 +1,16 @@
 <div class="menu">
-    <a onclick="window.location.reload()">New Game</a>
-    <a (click)="toggle()">{{ buttonText }}</a>
+    <a routerLink="/info" >Info</a>
+    <a routerLink="/images" *ngIf="router.url === '/info'" >New Game</a>
+    <a onclick="window.location.reload()" *ngIf="router.url === '/images'" >New Game</a>
+    <a (click)="toggle()" *ngIf="router.url === '/images'">{{ buttonText }}</a>
 </div>
 <div class="score">
-    <a style="color:blue">Blue: {{ blueLeft }}</a>
-    <a style="color:green">Green: {{ greenLeft }}</a>
+    <a style="color:blue" *ngIf="router.url === '/images'">Blue: {{ blueLeft }}</a>
+    <a style="color:green" *ngIf="router.url === '/images'">Green: {{ greenLeft }}</a>
 </div>
 <br>
-<div class="message">
-    <p>Round: {{ actualPlayer }}</p>
+<div class="message" *ngIf="router.url === '/images'">
+    <p *ngIf="router.url === '/images'">Round: {{ actualPlayer }}</p>
     <br>
     <a *ngIf="blueLeft == 0" style="color:blue">Blue Won!</a>
     <a *ngIf="greenLeft == 0" style="color:green">Green Won!</a>

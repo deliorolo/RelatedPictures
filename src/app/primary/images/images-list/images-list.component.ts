@@ -128,6 +128,7 @@ export class ImagesListComponent implements OnInit {
       this.data[1] = 8;
       this.data[3] = 1;
     }
+    this.data[2] = 0;
 
     aux = Math.floor(Math.random() * 20);
     this.framesSaved[aux] = "frameRed"
@@ -157,5 +158,4 @@ export class ImagesListComponent implements OnInit {
     }
 
   }
-
 }

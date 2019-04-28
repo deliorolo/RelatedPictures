@@ -12,7 +12,7 @@ export class ImagesComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   id: number;
-  urls$: string[] = [];
+  urls: string[] = [];
   goodurl: string[] = [];
   j: number = 0;
   k: number = -1;
@@ -29,18 +29,15 @@ export class ImagesComponent implements OnInit {
 
       this.id = Math.floor(Math.random() * 1085);
       
-      this.urls$[i] = this.dataService.getImage(this.id)
+      this.urls[i] = this.dataService.getImage(this.id)
         this.k++; 
-        this.MapValidUrls(); 
-
-        
+        this.MapValidUrls();        
     }
-
   }
 
   MapValidUrls() {
-    if (!this.goodurl.includes(this.urls$[this.k])) {
-      this.goodurl[this.j] = this.urls$[this.k];
+    if (!this.goodurl.includes(this.urls[this.k])) {
+      this.goodurl[this.j] = this.urls[this.k];
       this.j++;
     }
   }

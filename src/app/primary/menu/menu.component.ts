@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MenuService } from '../../core/menu.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -16,7 +17,7 @@ export class MenuComponent implements OnInit {
   actualPlayer: string;
   redSelected: boolean;
 
-  constructor(private menuService: MenuService) { }
+  constructor(private menuService: MenuService, public router: Router) { }
 
   ngOnInit() {
 
@@ -27,6 +28,9 @@ export class MenuComponent implements OnInit {
 
             if(data[2] == 1){
               this.redSelected = true; 
+            }
+            else{
+              this.redSelected = false;
             }
 
             if(data[3] == 0){
@@ -50,7 +54,5 @@ export class MenuComponent implements OnInit {
       this.menuService.HideShowColors();
     }
   }
-
-
 
 }
