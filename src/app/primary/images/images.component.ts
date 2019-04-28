@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { DataService } from '../../core/data.service';
 
@@ -14,8 +14,8 @@ export class ImagesComponent implements OnInit {
   id: number;
   urls: string[] = [];
   goodurl: string[] = [];
-  j: number = 0;
-  k: number = -1;
+  auxMap: number = 0;
+  aux: number = -1;
 
 
   ngOnInit() {
@@ -28,17 +28,17 @@ export class ImagesComponent implements OnInit {
         .add(() => { this.k++; this.MapValidUrls(); })*/
 
       this.id = Math.floor(Math.random() * 1085);
-      
+
       this.urls[i] = this.dataService.getImage(this.id)
-        this.k++; 
-        this.MapValidUrls();        
+      this.aux++;
+      this.MapValidUrls();
     }
   }
 
   MapValidUrls() {
-    if (!this.goodurl.includes(this.urls[this.k])) {
-      this.goodurl[this.j] = this.urls[this.k];
-      this.j++;
+    if (!this.goodurl.includes(this.urls[this.aux])) {
+      this.goodurl[this.auxMap] = this.urls[this.aux];
+      this.auxMap++;
     }
   }
 

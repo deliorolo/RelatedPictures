@@ -7,4 +7,5 @@ import { DataService } from './data.service';
     imports: [ HttpClientModule ],
     providers: [ DataService ]
 })
+
 export class CoreModule { }

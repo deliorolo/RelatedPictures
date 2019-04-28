@@ -13,4 +13,5 @@ import { PrimaryModule } from './primary/primary.module';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

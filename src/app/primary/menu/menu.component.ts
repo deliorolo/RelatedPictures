@@ -23,22 +23,22 @@ export class MenuComponent implements OnInit {
 
     this.menuService.imagesListCall$.subscribe(
       (data) => {
-            this.blueLeft = data[0];
-            this.greenLeft = data[1];
+        this.blueLeft = data[0];
+        this.greenLeft = data[1];
 
-            if(data[2] == 1){
-              this.redSelected = true; 
-            }
-            else{
-              this.redSelected = false;
-            }
+        if (data[2] == 1) {
+          this.redSelected = true;
+        }
+        else {
+          this.redSelected = false;
+        }
 
-            if(data[3] == 0){
-              this.actualPlayer = "Blue";
-            }
-            else if (data[3] == 1){
-              this.actualPlayer = "Green";
-            }
+        if (data[3] == 0) {
+          this.actualPlayer = "Blue";
+        }
+        else if (data[3] == 1) {
+          this.actualPlayer = "Green";
+        }
       }
     )
   }

@@ -7,6 +7,7 @@ import { MenuService } from '../../../core/menu.service';
   templateUrl: './images-list.component.html',
   styleUrls: ['./images-list.component.css']
 })
+
 export class ImagesListComponent implements OnInit {
 
   links: string[] = [];
@@ -14,7 +15,8 @@ export class ImagesListComponent implements OnInit {
   framesSaved: string[] = [];
   clickedImages: boolean[] = [];
   colorsShown: boolean = false;
-  j: number = 0;
+  aux: number = 0;
+  indexs: number[] = [];
 
   // [0] - number of blue
   // [1] - number of green
@@ -35,6 +37,7 @@ export class ImagesListComponent implements OnInit {
 
     for (let i = 0; i < 20; i++) {
       this.clickedImages[i] = false;
+      this.indexs[i] = i;
     }
 
     this.resetShownItems();
@@ -54,8 +57,8 @@ export class ImagesListComponent implements OnInit {
   }
 
   updateUrl(n: number) {
-    this.links[n] = this.links[20 + this.j];
-    this.j++;
+    this.links[n] = this.links[20 + this.aux];
+    this.aux++;
   }
 
   resetShownItems() {
@@ -106,7 +109,6 @@ export class ImagesListComponent implements OnInit {
           this.data[3] = 1;
         }
       }
-
       this.menuService.SendDataPoints(this.data);
     }
   }

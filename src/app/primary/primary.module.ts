@@ -23,4 +23,5 @@ import { InfoModule } from './info/info.module';
   exports: [PrimaryComponent]
 
 })
+
 export class PrimaryModule { }

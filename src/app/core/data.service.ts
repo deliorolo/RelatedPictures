@@ -15,10 +15,8 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getImage(id: number): string {
-
     return (this.baseUrl + id + '/300/200');
   }
-
 
   /*getImage(id: number): Observable<IImage>{
     return this.http.get<IImage>(this.baseUrl + id)

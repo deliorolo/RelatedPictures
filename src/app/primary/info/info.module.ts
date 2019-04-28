@@ -11,4 +11,5 @@ import { InfoRoutingModule } from './info-routing.module';
     InfoRoutingModule
   ]
 })
+
 export class InfoModule { }
