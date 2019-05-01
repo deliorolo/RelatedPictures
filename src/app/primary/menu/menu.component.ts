@@ -55,4 +55,9 @@ export class MenuComponent implements OnInit {
     }
   }
 
+resetButtons(){
+  this.buttonText = "Show Colors";
+  this.showFrames = false;
+}
+
 }

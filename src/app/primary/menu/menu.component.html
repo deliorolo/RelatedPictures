@@ -1,6 +1,6 @@
 <div class="menu">
     <a routerLink="/info" >Info</a>
-    <a routerLink="/images" *ngIf="router.url === '/info'" >New Game</a>
+    <a routerLink="/images" (click)="resetButtons()" *ngIf="router.url === '/info'">New Game</a>
     <a onclick="window.location.reload()" *ngIf="router.url === '/images'" >New Game</a>
     <a (click)="toggle()" *ngIf="router.url === '/images'">{{ buttonText }}</a>
 </div>
